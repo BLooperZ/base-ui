@@ -23,3 +23,5 @@ collections:
   patterns:
     output: true
     permalink: /pattern/:path/
+
+baseurl:
