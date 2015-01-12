@@ -25,5 +25,3 @@ layout: nil
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>{% endfor %}
 </feed>
-
-CHECK!
