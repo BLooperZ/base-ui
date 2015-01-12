@@ -2,7 +2,6 @@ doctype: <!doctype html>
 
 meta:
   headers:
-    charset: utf-8
     x-ua-compatible:
     - IE=edge
 #   - chrome=1
