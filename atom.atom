@@ -11,7 +11,8 @@ layout: nil
   <author>
     <name>{{ site.github.owner_name }}</name>
     <email>you@example.com</email>
-  </author>{% for post in site.posts %}<entry>
+  </author>
+    {% for post in site.posts %}<entry>
     <id>{{ site.github.url }}{{ post.id }}</id>
     <link type="text/html" rel="alternate" href="{{ site.github.url }}{{ post.url }}"/>
     <title>{{ post.title }}</title>
