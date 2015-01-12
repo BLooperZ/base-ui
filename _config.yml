@@ -14,8 +14,10 @@ include: ['_patterns']
 relative_permalinks: false
 
 gems:
-- jemoji # Emoji please!
-- jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+- jekyll-mentions
+- jemoji
+- jekyll-redirect-from
+- jekyll-sitemap
 
 collections:
   patterns:
