@@ -36,7 +36,7 @@ link:
 #   RSS.xml:
 #     type: application/rss+xml
 #     title: RSS Feed
-    atom.xml:
+    atom.atom:
       type: application/atom+xml
       title: Atom Feed
 
