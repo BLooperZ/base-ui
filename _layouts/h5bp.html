@@ -1,7 +1,8 @@
 {% assign h5bp = site.data.h5bp %}{% assign project = site.github %}{{ h5bp.doctype }}
 <html{% for attr in site.html %} {{ attr[0] }}="{{ attr[1] }}"{% endfor %}>
-  <head>{% for header in h5bp.meta.headers %}
-    <meta {% if header[0] contains 'charset' %}charset{% else %}http-equiv="{{ header[0] }}" content{% endif %}="{{header[1] | join: ', ' }}">{% endfor %}
+  <head>
+    <meta charset="{{ site.encoding }}">{% for header in h5bp.meta.headers %}
+    <meta http-equiv="{{ header[0] }}" content="{{header[1] | join: ', ' }}">{% endfor %}
     <title>{{ project.project_title }}{% if page.title %} – {{ page.title }}{% endif %}</title>
     <meta name="author" content="{{ project.owner_name }}">
     <meta name="description" content="{{ project.project_tagline }}">{% for umeta in h5bp.meta offset:1 %}{% for meta in umeta[1] %}
