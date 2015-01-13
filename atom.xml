@@ -1,7 +1,7 @@
 ---
 layout: nil
 no_of_posts: 10
-# style: css
+# style: css   <generator uri="http://jekyllrb.com/">Jekyll</generator>
 style: xsl
 ---
 <?xml version="1.0" encoding="{{ site.encoding }}"?>
@@ -13,7 +13,7 @@ style: xsl
   <link type="text/html" href="{{ site.github.url }}" rel="alternate"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.github.url | uri_escape }}/</id>
-  <generator uri="http://jekyllrb.com/">Jekyll</generator>
+
   <author>
     <name>{{ site.github.owner_name | xml_escape }}</name>
   </author>{% for post in site.posts limit:10 %}
