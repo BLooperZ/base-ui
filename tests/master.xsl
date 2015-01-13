@@ -52,7 +52,7 @@
 
 
               <xsl:for-each select="atom:entry">
-                <xsl:value-of select="atom:entry/title"/>
+                <xsl:text>whahaahahah</xsl:text>
               </xsl:for-each>
               <xsl:text>&#10;&#10;</xsl:text>
               <div id="body">
