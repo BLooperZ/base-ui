@@ -29,10 +29,13 @@
               <title><xsl:value-of select="atom:title"/></title>
               <meta name="author" content="{{ site.github.owner_name }}"/>
               <meta name="description" content="{{ site.github.project_tagline }}"/>
-              <meta name="generator" content="{atom:generator}"/>
+
+              <xsl:if test="atom:generator">
+                <meta name="generator" content="{atom:generator}"/>
+              </xsl:if>
 
               <xsl:if test="atom:link[@rel='self']">
-                <link rel="alternate" href="{atom:link[@rel='self']/@uri}"
+                <link rel="alternate" href="{atom:link[@rel='self']/@href}"
                       title="{atom:title}" type="{atom:link[@rel='self']/@type}"/>
               </xsl:if>
 

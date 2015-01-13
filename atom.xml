@@ -9,7 +9,7 @@ style: xsl
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
   <title>{{ site.github.project_title | xml_escape }}</title>
   <subtitle>{{ site.github.project_tagline | xml_escape }}</subtitle>
-  <link type="application/atom+xml" rel="self" uri="/{{ site.github.repository_name | uri_escape }}{{ page.url | uri_escape }}"/>
+  <link type="application/atom+xml" rel="self" href="/{{ site.github.repository_name | uri_escape }}{{ page.url | uri_escape }}"/>
   <link type="text/html" href="{{ site.github.url }}" rel="alternate"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.github.url | uri_escape }}/</id>
