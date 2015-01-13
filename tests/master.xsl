@@ -12,8 +12,7 @@
                 xmlns:atom="http://www.w3.org/2005/Atom"
                 xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-	<xsl:output doctype-public="html"
-                encoding="{{ site.encoding }}"
+	<xsl:output encoding="{{ site.encoding }}"
 				indent="yes"
 				method="html"
 				media-type="text/html"
