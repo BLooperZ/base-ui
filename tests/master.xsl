@@ -28,7 +28,7 @@
 
               <xsl:if test="link[@rel='self']">
                 <link rel="alternate" href="{link[@rel='self']/@href}"
-                      title="{atom:title}" type="{link[@rel='self']/@type}"/>
+                      title="{title}" type="{link[@rel='self']/@type}"/>
               </xsl:if>
 
               <link rel="stylesheet"
@@ -40,15 +40,15 @@
 			<body>
 
               <xsl:text>&#10;</xsl:text>
-              <h1><xsl:value-of select="atom:title"/></h1>
+              <h1><xsl:value-of select="title"/></h1>
 
 
-              <xsl:for-each select="atom:entry">
+              <xsl:for-each select="entry">
                 <xsl:text>whahaahahah</xsl:text>
               </xsl:for-each>
               <xsl:text>&#10;&#10;</xsl:text>
               <div id="body">
-                <xsl:apply-templates select="atom:entry"/>
+                <xsl:apply-templates select="entry"/>
                 <xsl:text>&#10;&#10;</xsl:text>
               </div>
 
@@ -65,7 +65,7 @@
                   <dt>Last updated:</dt>
                   <dd>
                     <span class="date" title="GMT">
-                      <xsl:value-of select="atom:updated/@planet:format"/>
+                      <xsl:value-of select="updated/@planet:format"/>
                     </span>
                   </dd>
                   <dt>Powered by:</dt>
@@ -104,7 +104,7 @@
                     <xsl:sort select="planet:name"/>
                     <xsl:text>&#10;</xsl:text>
                     <li>
-                      <a href="{atom:link[@rel='alternate']/@href}">
+                      <a href="{link[@rel='alternate']/@href}">
                         <xsl:value-of select="planet:name"/>
                       </a>
                     </li>
