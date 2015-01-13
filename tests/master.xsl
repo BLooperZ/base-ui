@@ -8,7 +8,9 @@
         HTML5 Boilerplate, http://html5boilerplate.com
 -->
 <xsl:stylesheet version="1.0"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:atom="http://www.w3.org/2005/Atom"
+                xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
 	<xsl:output encoding="{{ site.encoding }}"
 				indent="yes"
@@ -17,40 +19,96 @@
 				omit-xml-declaration="yes"
 				doctype-system="about:legacy-compat"/>
 
-	<xsl:template match="/">
-		<html lang="en" class="no-js">
+	<xsl:template match="atom:feed">
+		<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="no-js">
 
 			<head>
               {% for header in site.data.h5bp.meta.headers %}
               <meta http-equiv="{{ header[0] }}" content="{{header[1] | join: ', ' }}"/>
               {% endfor %}
-              <title>{{ site.github.project_title }}{% if page.title %} – {{ page.title }}{% endif %}</title>
+              <title><xsl:value-of select="atom:title"/></title>
               <meta name="author" content="{{ site.github.owner_name }}"/>
               <meta name="description" content="{{ site.github.project_tagline }}"/>
-              {% for umeta in site.data.h5bp.meta offset:1 %}
-              {% for meta in umeta[1] %}
-              <meta {{ umeta[0] }}="{{ meta[0] }}" content="{{ meta[1] | join: ', ' }}"/>
-              {% endfor %}
-              {% endfor %}
+              <meta name="generator" content="{atom:generator}"/>
 
+              <xsl:if test="atom:link[@rel='self']">
+                <link rel="alternate" href="{atom:link[@rel='self']/@uri}"
+                      title="{atom:title}" type="{atom:link[@rel='self']/@type}"/>
+              </xsl:if>
 
 			</head>
 
 			<body>
 
-			  <div id="container">
-			    <header>
+              <xsl:text>&#10;</xsl:text>
+              <h1><xsl:value-of select="atom:title"/></h1>
 
-			    </header>
+              <xsl:text>&#10;&#10;</xsl:text>
+              <div id="body">
+                <xsl:apply-templates select="atom:entry"/>
+                <xsl:text>&#10;&#10;</xsl:text>
+              </div>
 
-			    <main>
+              <xsl:text>&#10;&#10;</xsl:text>
+              <h1>Subscriptions</h1>
 
-			    </main>
+              <xsl:text>&#10;</xsl:text>
+              <div id="sidebar">
 
-			    <footer>
+                <xsl:text>&#10;&#10;</xsl:text>
+                <h2>Info</h2>
 
-			    </footer>
-			  </div> <!--! end of #container -->
+                <dl>
+                  <dt>Last updated:</dt>
+                  <dd>
+                    <span class="date" title="GMT">
+                      <xsl:value-of select="atom:updated/@planet:format"/>
+                    </span>
+                  </dd>
+                  <dt>Powered by:</dt>
+                  <dd>
+                    <a href="http://intertwingly.net/code/venus/">
+                      <img src="images/venus.png" width="80" height="15"
+                           alt="Venus" border="0"/>
+                    </a>
+                  </dd>
+                  <dt>Export:</dt>
+                  <dd>
+                    <ul>
+                      <li>
+                        <a href="opml.xml">
+                          <img src="images/opml.png" alt="OPML"/>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="foafroll.xml">
+                          <img src="images/foaf.png" alt="FOAF"/>
+                        </a>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+
+              </div>
+
+              <xsl:text>&#10;</xsl:text>
+              <div id="footer">
+
+                <xsl:text>&#10;&#10;</xsl:text>
+                <xsl:text>&#10;</xsl:text>
+                <ul>
+                  <xsl:for-each select="planet:source">
+                    <xsl:sort select="planet:name"/>
+                    <xsl:text>&#10;</xsl:text>
+                    <li>
+                      <a href="{atom:link[@rel='alternate']/@href}">
+                        <xsl:value-of select="planet:name"/>
+                      </a>
+                    </li>
+                  </xsl:for-each>
+                  <xsl:text>&#10;</xsl:text>
+                </ul>
+              </div>
 
               {% if site.google_analytics %}
 			  <script>
