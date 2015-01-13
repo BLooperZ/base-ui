@@ -2,7 +2,6 @@
   version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:atom="http://www.w3.org/2005/Atom"
-  exclude-result-prefixes="atom"
 >
   <xsl:template match="/">
     <html xmlns="http://www.w3.org/1999/xhtml">
