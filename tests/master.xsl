@@ -32,19 +32,7 @@
               <meta {{ umeta[0] }}="{{ meta[0] }}" content="{{ meta[1] | join: ', ' }}"/>
               {% endfor %}
               {% endfor %}
-			  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-			  <link rel="shortcut icon" href="/favicon.ico"/>
-			  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 
-
-			  <!-- CSS : implied media="all" -->
-			  <link rel="stylesheet" href="css/style.css?v=2"/>
-
-			  <!-- Uncomment if you are specifically targeting less enabled mobile browsers
-			  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
-
-			  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-			  <script src="js/libs/modernizr-1.6.min.js"></script>
 
 			</head>
 
@@ -88,18 +76,16 @@
 			  <!-- end profiling code -->
 
 
-			  <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
-			       change the UA-XXXXX-X to be your site's ID -->
+              {% if site.google_analytics %}
 			  <script>
-			   <![CDATA[var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
-				   (function(d, t) {
-				    var g = d.createElement(t),
-				        s = d.getElementsByTagName(t)[0];
-				    g.async = true;
-				    g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				    s.parentNode.insertBefore(g, s);
-				   })(document, 'script');]]>
+			   <![CDATA[(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');]]>
 			  </script>
+              {% endif %}
 
 			</body>
 		</html>
