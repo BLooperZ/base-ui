@@ -36,6 +36,10 @@
                       title="{atom:title}" type="{atom:link[@rel='self']/@type}"/>
               </xsl:if>
 
+              <link rel="stylesheet"
+                    href="http://blooperz.github.io/base-ui/tests/testdou.css"
+                    type="text/css"/>
+
 			</head>
 
 			<body>
