@@ -5,7 +5,7 @@ css: type="text/css" href="http://blooperz.github.io/base-ui/tests/atom.css"
 xsl: type="text/xsl" href="http://blooperz.github.io/base-ui/tests/atom.xsl"
 ---
 <?xml version="1.0" encoding="{{ site.encoding }}"?>
-<?xml-stylesheet  {{ page.xsl }}?>
+<?xml-stylesheet  {{ page.css }}?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
   <title>{{ site.github.project_title | xml_escape }}</title>
   <subtitle>{{ site.github.project_tagline | xml_escape }}</subtitle>
