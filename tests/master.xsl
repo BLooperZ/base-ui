@@ -37,7 +37,7 @@
               </xsl:if>
 
               <link rel="stylesheet"
-                    href="//blooperz.github.io/base-ui/tests/testdou.css"
+                    href="/base-ui/tests/testdou.css"
                     type="text/css"/>
 
 			</head>
