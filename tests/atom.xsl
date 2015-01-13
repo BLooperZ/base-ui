@@ -5,14 +5,14 @@
 >
   <xsl:template match="/">
     <html xmlns="http://www.w3.org/1999/xhtml">
-      <body style="font-family: Alef; font-size: 12pt; background-color: blue">
+      <body style="font-family: Alef; font-size: 12pt; background-color: blue;">
         <xsl:apply-tepmplates select="atom:feed/atom:entry" />
       </body>
     </html>
   </xsl:template>
 
   <xsl:tempate match="atom:entry">
-    <div style="background-color:teal;color:white;padding:4px">
+    <div style="background-color: teal; color: white; padding: 4px;">
       <span style="font-weight:bold">
         <xsl:value-of select="atom:title"/>
       </span>
