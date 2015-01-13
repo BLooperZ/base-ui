@@ -36,10 +36,6 @@
                       title="{atom:title}" type="{atom:link[@rel='self']/@type}"/>
               </xsl:if>
 
-              <link rel="stylesheet"
-                    type="text/css"
-                    href="/tests/testdou.css"/>
-
 			</head>
 
 			<body>
