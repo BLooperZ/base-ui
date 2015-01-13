@@ -8,8 +8,8 @@
 
 	<xsl:output encoding="{{ site.encoding }}"
 				indent="yes"
-				method="xml"
-				media-type="application/xml+html"
+				method="html"
+				media-type="text/html"
 				omit-xml-declaration="yes"/>
 
 	<xsl:template match="atom:feed">
