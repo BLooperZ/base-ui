@@ -38,7 +38,7 @@
 
               <link rel="stylesheet"
                     type="text/css"
-                    href="/tests/test.css"/>
+                    href="/tests/testdou.css"/>
 
 			</head>
 
