@@ -9,12 +9,12 @@
 	<xsl:output encoding="{{ site.encoding }}"
 				indent="yes"
 				method="html"
-				media-type="application/xhtml+xml"
+				media-type="text/html"
 				omit-xml-declaration="yes"
 				doctype-system="about:legacy-compat"/>
 
 	<xsl:template match="atom:feed">
-		<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="no-js">
+		<html lang="en" class="no-js">
 
 			<head>
               {% for header in site.data.h5bp.meta.headers %}
