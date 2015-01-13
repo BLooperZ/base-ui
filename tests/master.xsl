@@ -3,7 +3,6 @@
 <?xml version="1.0" encoding="{{ site.encoding }}" ?>
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:atom="http://www.w3.org/2005/Atom"
                 xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
 	<xsl:output encoding="{{ site.encoding }}"
@@ -65,7 +64,7 @@
                   <dt>Last updated:</dt>
                   <dd>
                     <span class="date" title="GMT">
-                      <xsl:value-of select="updated/@planet:format"/>
+                      <xsl:value-of select="updated/@format"/>
                     </span>
                   </dd>
                   <dt>Powered by:</dt>
@@ -100,12 +99,12 @@
                 <xsl:text>&#10;&#10;</xsl:text>
                 <xsl:text>&#10;</xsl:text>
                 <ul>
-                  <xsl:for-each select="planet:source">
-                    <xsl:sort select="planet:name"/>
+                  <xsl:for-each select="source">
+                    <xsl:sort select="name"/>
                     <xsl:text>&#10;</xsl:text>
                     <li>
                       <a href="{link[@rel='alternate']/@href}">
-                        <xsl:value-of select="planet:name"/>
+                        <xsl:value-of select="name"/>
                       </a>
                     </li>
                   </xsl:for-each>
