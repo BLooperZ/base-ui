@@ -8,14 +8,13 @@
 
 	<xsl:output encoding="{{ site.encoding }}"
 				indent="yes"
-				method="html"
-				media-type="text/html"
-				omit-xml-declaration="yes"
+				method="xml"
+				media-type="application/xml+html"
+				omit-xml-declaration="no"
 				doctype-system="about:legacy-compat"/>
 
 	<xsl:template match="atom:feed">
 		<html lang="en" class="no-js">
-
 			<head>
               {% for header in site.data.h5bp.meta.headers %}
               <meta http-equiv="{{ header[0] }}" content="{{header[1] | join: ', ' }}"/>
