@@ -23,13 +23,13 @@
 			<head>
 			  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 			       Remove this if you use the .htaccess -->
-              {% for header in h5bp.meta.headers %}
+              {% for header in site.data.h5bp.meta.headers %}
                 <meta http-equiv="{{ header[0] }}" content="{{header[1] | join: ', ' }}">
               {% endfor %}
-              <title>{{ project.project_title }}{% if page.title %} – {{ page.title }}{% endif %}</title>
-              <meta name="author" content="{{ project.owner_name }}">
-              <meta name="description" content="{{ project.project_tagline }}">
-              {% for umeta in h5bp.meta offset:1 %}
+              <title>{{ site.github.project_title }}{% if page.title %} – {{ page.title }}{% endif %}</title>
+              <meta name="author" content="{{ site.github.owner_name }}">
+              <meta name="description" content="{{ site.github.project_tagline }}">
+              {% for umeta in site.data.h5bp.meta offset:1 %}
                 {% for meta in umeta[1] %}
                   <meta {{ umeta[0] }}="{{ meta[0] }}" content="{{ meta[1] | join: ', ' }}">
                 {% endfor %}
