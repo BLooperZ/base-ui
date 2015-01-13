@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:atom="http://www.w3.org/2005/Atom">
@@ -24,7 +23,7 @@
 <p>This RSS feed provides the latest posts from <xsl:apply-templates select="title"/>.</p>
 
 <h2>What is an RSS feed?</h2>
-<p>An RSS feed is an XML-based data format that allows publishers to syndicate information. It allows you to stay up to date on topics that interest you&mdash;all in one place&mdash;without visiting 20-30 different web sites to check for new content. All you need to do to get started is to add the URL (web address) for this feed to your RSS reader.</p>
+<p>An RSS feed is an XML-based data format that allows publishers to syndicate information. It allows you to stay up to date on topics that interest you-all in one place-without visiting 20-30 different web sites to check for new content. All you need to do to get started is to add the URL (web address) for this feed to your RSS reader.</p>
 <p>The URL for this RSS feed is: <xsl:apply-templates select="atom:link"/></p>
 <h3>Recommended RSS readers:</h3>
 <ul>
