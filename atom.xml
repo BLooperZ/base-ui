@@ -3,7 +3,7 @@ layout: nil
 no_of_posts: 10
 ---
 <?xml version="1.0" encoding="{{ site.encoding }}"?>
-<?xml-stylesheet type="text/xsl" href="http://linusmat.com/files/stackoverflow/atom.xsl"?>
+<?xml-stylesheet type="text/xsl" href="/atom.xsl"?>
 <!--<?xml-stylesheet type="text/css" href="http://plasmasturm.org/code/misc/atom.css"?>-->
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
   <title>{{ site.github.project_title | xml_escape }}</title>
