@@ -112,9 +112,6 @@
                   <xsl:text>&#10;</xsl:text>
                 </ul>
               </div>
-              <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/{{ h5bp.jquery.version }}/jquery.min.js"></script>
-              <script>//<![CDATA[
-              window.jQuery || document.write('<script type="text/javascript" src="js/vendor/jquery-{{ h5bp.jquery.version }}.min.js"><\/script>')//]]></script>
 
               {% if site.google_analytics %}
 			  <script type="text/javascript">//<![CDATA[
