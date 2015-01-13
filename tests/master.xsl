@@ -12,7 +12,7 @@
 				media-type="application/xhtml+xml"
 				omit-xml-declaration="yes"/>
 
-	<xsl:template match="atom:feed">
+	<xsl:template match="/">
 		<html lang="en" class="no-js">
 			<head>
               {% for header in site.data.h5bp.meta.headers %}
