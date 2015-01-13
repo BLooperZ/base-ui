@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+---
+---
+{% assign h5bp = site.data.h5bp %}
+{% assign project = site.github %}
+<?xml version="1.0" encoding="{{ site.encoding }}" ?>
 <!--
 	HTML5 Boilerplate XSLT Master Stylesheet (based on Paul Irish's HTML5 Boilerplate index.html file)
 	Created by Brian Zerangue on 2010-11-15.
@@ -9,7 +13,7 @@
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-	<xsl:output encoding="UTF-8"
+	<xsl:output encoding="{{ site.encoding }}"
 				indent="yes"
 				method="html"
 				media-type="text/html"
@@ -17,25 +21,23 @@
 				doctype-system="about:legacy-compat"/>
 
 	<xsl:template match="/">
-		<xsl:comment><![CDATA[[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]]]></xsl:comment>
-		<xsl:comment><![CDATA[[if IE 7]><html lang="en" class="no-js ie7"><![endif]]]></xsl:comment>
-		<xsl:comment><![CDATA[[if IE 8]><html lang="en" class="no-js ie8"><![endif]]]></xsl:comment>
-		<xsl:comment><![CDATA[[if IE 9]><html lang="en" class="no-js ie9"><![endif]]]></xsl:comment>
-		<xsl:comment><![CDATA[[if IE]><![if (gt IE 9)|!(IE)]><![endif]]]></xsl:comment><html lang="en" class="no-js">
-		<xsl:comment><![CDATA[[if IE]><![endif]><![endif]]]></xsl:comment>
+		<html lang="en" class="no-js">
+
 			<head>
 
 			  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 			       Remove this if you use the .htaccess -->
-			  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><!-- This does not validate -->
-
-			  <title></title>
-			  <meta name="description" content=""/>
-			  <meta name="author" content=""/>
-
-			  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
-			  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+              {% for header in h5bp.meta.headers %}
+                <meta http-equiv="{{ header[0] }}" content="{{header[1] | join: ', ' }}">
+              {% endfor %}
+              <title>{{ project.project_title }}{% if page.title %} – {{ page.title }}{% endif %}</title>
+              <meta name="author" content="{{ project.owner_name }}">
+              <meta name="description" content="{{ project.project_tagline }}">
+              {% for umeta in h5bp.meta offset:1 %}
+                {% for meta in umeta[1] %}
+                  <meta {{ umeta[0] }}="{{ meta[0] }}" content="{{ meta[1] | join: ', ' }}">
+                {% endfor %}
+              {% endfor %}
 			  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 			  <link rel="shortcut icon" href="/favicon.ico"/>
 			  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
