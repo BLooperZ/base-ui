@@ -1,7 +1,5 @@
 ---
 ---
-{% assign h5bp = site.data.h5bp %}
-{% assign project = site.github %}
 <?xml version="1.0" encoding="{{ site.encoding }}" ?>
 <!--
 	HTML5 Boilerplate XSLT Master Stylesheet (based on Paul Irish's HTML5 Boilerplate index.html file)
@@ -9,7 +7,8 @@
 	Copyright (c) 2010 Paul Irish (Everything but the XSLT), Brian Zerangue (XSLT).
         HTML5 Boilerplate, http://html5boilerplate.com
 -->
-
+{% assign h5bp = site.data.h5bp %}
+{% assign project = site.github %}
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
