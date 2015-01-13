@@ -1,8 +1,8 @@
 ---
 layout: nil
 no_of_posts: 10
-css: <?xml-stylesheet type="text/css" href="http://plasmasturm.org/code/misc/atom.css"?>
-xsl: <?xml-stylesheet type="text/xsl" href="/atom.xsl"?>
+css: <?xml-stylesheet type="text/css" href="/tests/atom.css"?>
+xsl: <?xml-stylesheet type="text/xsl" href="/tests/atom.xsl"?>
 ---
 <?xml version="1.0" encoding="{{ site.encoding }}"?>
 {{ page.xsl }}
