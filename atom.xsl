@@ -6,7 +6,7 @@
 >
   <xsl:template match="/">
     <html xmlns="http://www.w3.org/1999/xhtml">
-      <body style="font-family:Arial;font-size:12pt;background-color:#EEEEEE">
+      <body style="font-family:Alef;font-size:12pt;background-color:#EEEEEE">
         <xsl:apply-tepmplates select="atom:feed/atom:entry" />
       </body>
     </html>
