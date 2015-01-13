@@ -13,7 +13,7 @@ style: xsl
   <link type="text/html" href="{{ site.github.url }}" rel="alternate"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.github.url | uri_escape }}/</id>
-  <generator uri="http://jekyllrb.com/">Jekyll</generator>
+  <generator uri="http://jekyllrb.com/" version="{{ site.github.versions.jekyll }}">Jekyll</generator>
   <author>
     <name>{{ site.github.owner_name | xml_escape }}</name>
   </author>{% for post in site.posts limit:10 %}
