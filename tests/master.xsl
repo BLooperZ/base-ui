@@ -18,17 +18,17 @@
               {% for header in site.data.h5bp.meta.headers %}
               <meta http-equiv="{{ header[0] }}" content="{{header[1] | join: ', ' }}"/>
               {% endfor %}
-              <title><xsl:value-of select="atom:title"/></title>
-              <meta name="author" content="{atom:author/atom:name}"/>
-              <meta name="description" content="{atom:subtitle}"/>
+              <title><xsl:value-of select="title"/></title>
+              <meta name="author" content="{author/name}"/>
+              <meta name="description" content="{subtitle}"/>
 
-              <xsl:if test="atom:generator">
-                <meta name="generator" content="{atom:generator}"/>
+              <xsl:if test="generator">
+                <meta name="generator" content="{generator}"/>
               </xsl:if>
 
-              <xsl:if test="atom:link[@rel='self']">
-                <link rel="alternate" href="{atom:link[@rel='self']/@href}"
-                      title="{atom:title}" type="{atom:link[@rel='self']/@type}"/>
+              <xsl:if test="link[@rel='self']">
+                <link rel="alternate" href="{link[@rel='self']/@href}"
+                      title="{atom:title}" type="{link[@rel='self']/@type}"/>
               </xsl:if>
 
               <link rel="stylesheet"
