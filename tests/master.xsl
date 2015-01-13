@@ -27,7 +27,7 @@
               <meta http-equiv="{{ header[0] }}" content="{{header[1] | join: ', ' }}"/>
               {% endfor %}
               <title><xsl:value-of select="atom:title"/></title>
-              <meta name="author" content="{atom:author.name}"/>
+              <meta name="author" content="{atom:author/name}"/>
               <meta name="description" content="{atom:subtitle}"/>
 
               <xsl:if test="atom:generator">
@@ -50,6 +50,10 @@
               <xsl:text>&#10;</xsl:text>
               <h1><xsl:value-of select="atom:title"/></h1>
 
+
+              <xsl:for-each select="atom:entry">
+                <xsl:value-of select="atom:entry/title"/>
+              </xsl:for-each>
               <xsl:text>&#10;&#10;</xsl:text>
               <div id="body">
                 <xsl:apply-templates select="atom:entry"/>
