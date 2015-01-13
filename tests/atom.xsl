@@ -61,6 +61,4 @@
 <xsl:template match="link">
 	<a href="{.}"><xsl:value-of select="."/></a>
 </xsl:template>
-
-
 </xsl:stylesheet>
