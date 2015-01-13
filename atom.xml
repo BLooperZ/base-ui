@@ -1,8 +1,8 @@
 ---
 layout: nil
 no_of_posts: 10
-style: css
-# style: xsl
+# style: css
+style: xsl
 ---
 <?xml version="1.0" encoding="{{ site.encoding }}"?>
 <?xml-stylesheet type="text/{{ page.style }}" href="{{ site.github.url }}/tests/atom.{{ page.style }}"?>
