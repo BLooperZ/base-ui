@@ -10,8 +10,7 @@
 				indent="yes"
 				method="html"
 				media-type="application/xhtml+xml"
-				omit-xml-declaration="yes"
-				doctype-system="about:legacy-compat"/>
+				omit-xml-declaration="yes"/>
 
 	<xsl:template match="atom:feed">
 		<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="no-js">
