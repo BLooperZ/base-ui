@@ -28,7 +28,7 @@
               {% endfor %}
               <title><xsl:value-of select="atom:title"/></title>
               <meta name="author" content="{atom:author.name/@content}"/>
-              <meta name="description" content="{atom:subtitle//@content}"/>
+              <meta name="description" content="{atom:subtitle/@content}"/>
 
               <xsl:if test="atom:generator">
                 <meta name="generator" content="{atom:generator}"/>
