@@ -1,12 +1,6 @@
 ---
 ---
 <?xml version="1.0" encoding="{{ site.encoding }}" ?>
-<!--
-	HTML5 Boilerplate XSLT Master Stylesheet (based on Paul Irish's HTML5 Boilerplate index.html file)
-	Created by Brian Zerangue on 2010-11-15.
-	Copyright (c) 2010 Paul Irish (Everything but the XSLT), Brian Zerangue (XSLT).
-        HTML5 Boilerplate, http://html5boilerplate.com
--->
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:atom="http://www.w3.org/2005/Atom"
