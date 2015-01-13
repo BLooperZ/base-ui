@@ -9,7 +9,7 @@
 				indent="yes"
 				method="xhtml"
 				media-type="application/xhtml+xml"
-				omit-xml-declaration="yes"/>
+				omit-xml-declaration="no"/>
 
 	<xsl:template match="/">
 		<html lang="en" class="no-js">
