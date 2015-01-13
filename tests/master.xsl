@@ -1,6 +1,6 @@
 ---
 ---
-<?xml version="1.0" encoding="{{ site.encoding }}" ?>{% assign h5bp = site.data.h5bp %}{% assign project = site.github %}
+<?xml version="1.0" encoding="{{ site.encoding }}" ?>
 <!--
 	HTML5 Boilerplate XSLT Master Stylesheet (based on Paul Irish's HTML5 Boilerplate index.html file)
 	Created by Brian Zerangue on 2010-11-15.
@@ -21,7 +21,6 @@
 		<html lang="en" class="no-js">
 
 			<head>
-
 			  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 			       Remove this if you use the .htaccess -->
               {% for header in h5bp.meta.headers %}
