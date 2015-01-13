@@ -67,7 +67,7 @@
                       <xsl:value-of select="updated/@format"/>
                     </span>
                   </dd>
-                  <dt>Powered by:</dt>
+                  <dt>Powereddd by:</dt>
                   <dd>
                     <a href="http://intertwingly.net/code/venus/">
                       <img src="images/venus.png" width="80" height="15"
