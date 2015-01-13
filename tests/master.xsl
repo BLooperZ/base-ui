@@ -111,8 +111,6 @@
               </div>
               <script src="//ajax.googleapis.com/ajax/libs/jquery/{{ h5bp.jquery.version }}/jquery.min.js"></script>
               <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{ h5bp.jquery.version }}.min.js"><\/script>')</script>
-              document.write("<script src=\"example.js\"><\/script>");
-
 
               {% if site.google_analytics %}
 			  <script>//<![CDATA[
