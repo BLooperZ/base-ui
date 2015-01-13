@@ -109,15 +109,19 @@
                   <xsl:text>&#10;</xsl:text>
                 </ul>
               </div>
+              <script src="//ajax.googleapis.com/ajax/libs/jquery/{{ h5bp.jquery.version }}/jquery.min.js"></script>
+              <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{ h5bp.jquery.version }}.min.js"><\/script>')</script>
+              document.write("<script src=\"example.js\"><\/script>");
+
 
               {% if site.google_analytics %}
-			  <script>
-			   <![CDATA[(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  <script>//<![CDATA[
+			   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create', '{{ site.google_analytics }}', 'auto');
-        ga('send', 'pageview');]]>
+        ga('send', 'pageview');//]]>
 			  </script>
               {% endif %}
 
