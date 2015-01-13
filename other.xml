@@ -1,0 +1,33 @@
+---
+layout: nil
+no_of_posts: 10
+# style: css
+style: xsl
+---
+<?xml version="1.0" encoding="{{ site.encoding }}"?>
+<?xml-stylesheet type="text/{{ page.style }}" href="{{ site.github.url }}/tests/master.{{ page.style }}"?>
+<feed xml:lang="en-US">
+  <title>{{ site.github.project_title | xml_escape }}</title>
+  <subtitle>{{ site.github.project_tagline | xml_escape }}</subtitle>
+  <link type="application/atom+xml" rel="self" href="/{{ site.github.repository_name | uri_escape }}{{ page.url | uri_escape }}"/>
+  <link type="text/html" href="{{ site.github.url }}" rel="alternate"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.github.url | uri_escape }}/</id>
+  <generator uri="http://jekyllrb.com/" version="{{ site.github.versions.jekyll }}">Jekyll</generator>
+  <author>
+    <name>{{ site.github.owner_name | xml_escape }}</name>
+  </author>{% for post in site.posts limit:10 %}
+  <entry>
+    <id>{{ site.github.url | uri_escape }}{{ post.id | uri_escape }}</id>
+    <link type="text/html" rel="alternate" href="{{ site.github.url | uri_escape }}{{ post.url | uri_escape }}"/>
+    <title type="html"><![CDATA[{{ post.title }}]]></title>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{% if post.updated == null %}{{ post.date | date_to_xmlschema }}{% else %}{{ post.updated | append: '@12am' | date_to_xmlschema }}{% endif %}</updated>
+    <author>
+      <name>{{ site.github.owner_name }}</name>
+      <uri>{{ site.github.url | uri_escape }}</uri>
+    </author>
+    <summary type="html">{{ post.excerpt | strip_html | xml_escape }}</summary>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>{% endfor %}
+</feed>
