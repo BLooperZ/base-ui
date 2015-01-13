@@ -8,7 +8,7 @@
 
 	<xsl:output encoding="{{ site.encoding }}"
 				indent="yes"
-				method="html"
+				method="xml"
 				media-type="application/xhtml+xml"
 				omit-xml-declaration="yes"/>
 
