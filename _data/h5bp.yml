@@ -1,7 +1,8 @@
 doctype: <!doctype html>
 
 base:
-  href: ll
+  href: //example.com
+  target: _self
 
 meta:
   headers:
