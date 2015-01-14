@@ -228,9 +228,8 @@ nav li a {
 	color:#999;
 	display:block;
 	text-align:center;
-	line-height:24px;
-	height:24px;
-	font-size:16px;
+	line-height:1.6em;
+	font-size:1rem;
 }
 
 nav li:first-child a {
