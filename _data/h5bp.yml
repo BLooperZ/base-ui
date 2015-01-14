@@ -1,5 +1,8 @@
 doctype: <!doctype html>
 
+base:
+  href: //
+
 meta:
   headers:
     x-ua-compatible:
