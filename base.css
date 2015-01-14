@@ -222,6 +222,7 @@ nav li a {
 	display:block;
 	text-align:center;
 	font-size:13px;
+    height: 24px;
 }
 
 nav li:first-child a {
