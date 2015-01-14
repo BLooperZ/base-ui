@@ -3,7 +3,7 @@
   <head>
     <meta charset="{{ site.encoding }}">{% for header in h5bp.meta.headers %}
     <meta http-equiv="{{ header[0] }}" content="{{header[1] | join: ', ' }}">{% endfor %}
-    <!-- CHECK THIS WITH PERMALINKS-->
+    <!-- CHECK THIS WITH PERMALINKS - CAN BE AWESOME-->
     <base href="{{ project.url | remove_first: 'http:' }}/">
     <title>{{ project.project_title }}{% if page.title %} – {{ page.title }}{% endif %}</title>
     <meta name="author" content="{{ project.owner_name }}">
