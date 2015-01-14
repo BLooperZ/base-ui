@@ -28,3 +28,6 @@ collections:
   patterns:
     output: true
     permalink: /pattern/:path/
+
+sass:
+  sass_dir: _sass
