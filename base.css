@@ -203,12 +203,12 @@ nav ul {
 	border:1px solid #e5e5e5;
 	width:272px;
     line-height: 2em;
+      height: 100%;
 }
 
 nav li {
 	display: inline-block;
 	width:67px;
-    height: 100%;
 	border-right:1px solid #e5e5e5;
 }
 
