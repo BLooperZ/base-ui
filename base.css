@@ -215,7 +215,7 @@ nav li {
     text-align: center;
 	display: inline-block;
 	height:24px;
-	padding: auto;
+    width: 24.5%;
 	border-right:1px solid #e5e5e5;
 }
 
@@ -230,7 +230,7 @@ nav li a {
 	text-align:center;
 	line-height:24px;
 	height:24px;
-	font-size:13px;
+	font-size:16px;
 }
 
 nav li:first-child a {
