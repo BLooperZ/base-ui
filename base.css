@@ -207,10 +207,11 @@ nav ul {
 	border-radius:5px;
 	border:1px solid #e5e5e5;
 	width:272px;
+    font-size: 0;
 }
 
 nav li {
-	float:left;
+	display: inline-block;
 	height:24px;
 	width:67px;
 	border-right:1px solid #e5e5e5;
