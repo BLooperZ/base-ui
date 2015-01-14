@@ -206,8 +206,9 @@ nav ul {
 }
 
 nav li {
-	float:left;
+	display: inline-block;
 	width:67px;
+    height: 100%;
 	border-right:1px solid #e5e5e5;
 }
 
