@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 permalink: /
 ---
 The project repository at [fork]({{ site.github.repository_url | remove_first: 'https:' }})
