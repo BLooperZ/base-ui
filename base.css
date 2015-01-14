@@ -193,6 +193,61 @@ header h1 {
 	margin-bottom: 12px;
 }
 
+/* Navbar */
+
+nav ul {
+	list-style:none;
+	height:24px;
+	padding:0;
+	background: #fff;
+	border-radius:5px;
+	border:1px solid #e5e5e5;
+	width:272px;
+}
+
+nav li {
+	float:left;
+	height:24px;
+	width:67px;
+	border-right:1px solid #e5e5e5;
+}
+
+nav li:last-child {
+	border-right:none;
+	width:68px;
+}
+
+nav li a {
+	font-size:11px;
+	color:#999;
+	display:block;
+	text-align:center;
+	line-height:24px;
+	height:24px;
+	font-size:13px;
+}
+
+nav li:first-child a {
+	border-radius:5px 0 0 5px;
+}
+
+nav li:last-child a {
+	border-radius:0 5px 5px 0;
+}
+
+nav li a:hover,
+nav li a:active {
+	color:#444;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav li a:active,
+nav li a.active,
+nav li a.active:hover {
+	background: #f8f8f8;
+}
+
 
 /* Pagination */
 
