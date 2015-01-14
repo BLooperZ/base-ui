@@ -720,7 +720,6 @@ form {
 <p class="post-meta">
 	{{ page.date | date_to_string }} &bull;
 	{% if readtime == '0' %} &lt; 1{% else %}{{ readtime }}{% endif %} min. read &bull;
-	<a href="#disqus_thread" data-disqus-identifier="{{ page.path | split:'/' | last | cgi_escape }}">Comments</a>
 </p>
 
 {% if page.image %}
@@ -736,10 +735,6 @@ form {
 {{ content }}
 
 <hr />
-
-{% if post.comments != false %}
-<div id="disqus_thread"></div>
-{% endif %}
 
 
 
