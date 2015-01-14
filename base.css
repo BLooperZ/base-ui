@@ -197,7 +197,6 @@ header h1 {
 
 nav ul {
 	list-style:none;
-	height:24px;
 	padding:0;
 	background: #fff;
 	border-radius:5px;
@@ -207,7 +206,6 @@ nav ul {
 
 nav li {
 	float:left;
-	height:24px;
 	width:67px;
 	border-right:1px solid #e5e5e5;
 }
@@ -222,8 +220,6 @@ nav li a {
 	color:#999;
 	display:block;
 	text-align:center;
-	line-height:24px;
-	height:24px;
 	font-size:13px;
 }
 
