@@ -215,7 +215,7 @@ nav li {
     text-align: center;
 	display: inline-block;
 	height:24px;
-	width: 12%;
+	padding: auto;
 	border-right:1px solid #e5e5e5;
 }
 
