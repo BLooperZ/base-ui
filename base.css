@@ -211,9 +211,10 @@ nav ul {
 }
 
 nav li {
+    text-align: center;
 	display: inline-block;
 	height:24px;
-	width: 24.5%;
+	width: 12%;
 	border-right:1px solid #e5e5e5;
 }
 
