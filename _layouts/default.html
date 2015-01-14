@@ -1,22 +1,21 @@
 ---
 layout: h5bp
 ---
-
-		<div class="wrapper{% if location == '' %} home{% endif %}">
-			<header>
-				<h1><a href="/"><img src="/img/pixelcog-logo.png" alt="{{ site.name }}" width="300" /></a></h1>
-				<nav><ul>
-				</ul></nav>
-			</header>
-			<section>
-				{{ content }}
-			</section>
-			<footer>
-				<p>
-					<small>© {{ site.time | date: '%Y' }} PixelCog Inc.</small><br />
-					<small>Made with <a href="http://jekyllrb.com/">Jekyll</a> &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>
-				</p>
-			</footer>
-		</div>
-		<script src="//pixelcog.com/js/scale.fix.js"></script>
+<div class="wrapper{% if location == '' %} home{% endif %}">
+  <header>
+    <h1><a href="/"><img src="/img/pixelcog-logo.png" alt="{{ site.name }}" width="300" /></a></h1>
+    <nav><ul>
+      </ul></nav>
+  </header>
+  <section>
+    {{ content }}
+  </section>
+  <footer>
+    <p>
+      <small>© {{ site.time | date: '%Y' }} PixelCog Inc.</small><br />
+      <small>Made with <a href="http://jekyllrb.com/">Jekyll</a> &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>
+    </p>
+  </footer>
+</div>
+<script src="//pixelcog.com/js/scale.fix.js"></script>
 
