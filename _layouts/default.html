@@ -1,5 +1,26 @@
 ---
 layout: h5bp
 ---
-
-{{content}}
+{% capture location %}{{ page.url | remove_first:'/' | split:'/' | first }}{% endcapture %}
+<div class="wrapper{% if location == '' %} home{% endif %}">
+  <header>
+    <h1><a href="/"><img src="/img/pixelcog-logo.png" alt="{{ site.name }}" width="300" /></a></h1>
+    <nav>
+      <ul>
+        <li><a {% if location == 'about' %}class="active" {% endif %}href="/about/">About</a></li>
+        <li><a {% if location == 'projects' %}class="active" {% endif %}href="/projects/">Projects</a></li>
+        <li><a {% if location == 'blog' %}class="active" {% endif %}href="/blog/">Blog</a></li>
+        <li><a {% if location == 'contact' %}class="active" {% endif %}href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    {{ content }}
+  </section>
+  <footer>
+    <p>Testing</p>
+    <p>
+      <small>Made with <a href="http://jekyllrb.com/">Jekyll</a> &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>
+    </p>
+  </footer>
+</div>
