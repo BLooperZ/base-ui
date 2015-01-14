@@ -7,7 +7,7 @@ The project repository at [spoon]({{ site.github.url | remove_first: 'http:' }})
 The project is called {{ site.github.project_title }}
 The project is parsed by {{ site.markdown }}
 encode {{ site.encoding }}
-
+;;;;;
 
 First Header  | Second Header
 ------------- | -------------
