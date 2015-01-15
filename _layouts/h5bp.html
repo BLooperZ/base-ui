@@ -20,5 +20,6 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{ h5bp.jquery.version }}.min.js"><\/script>')</script>
     {% for script in h5bp.script %}<script src="{{ script }}"></script>
     {% endfor %}{% for script in page.script %}<script src="{{ script }}"></script>{% endfor %}
-  {% include analytics.html %}{% endunless %}</body>
+  {% include analytics.html %}{% endunless %}
+  </body>
 </html>
