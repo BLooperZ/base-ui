@@ -1,8 +1,7 @@
 {% if site.google_analytics %}
     <script>
-      (function(b,o,i,l,r){b.GoogleAnalyticsObject=i;b[i]||(b[i]=
-      function(){(b[i].q=b[i].q||[]).push(arguments)});b[i].l=+new Date;l='script';
-      o.getElementsByTagName(l)[0].parentNode.appendChild(r=o.createElement(l));
-      r.src='//www.google-analytics.com/analytics.js'}(window,document,'ga'));
-      ga('create','{{ site.google_analytics }}','auto');ga('send','pageview');
+      (function(b,o,i,l){b.GoogleAnalyticsObject=i;b[i]||(b[i]=function()
+      {(b[i].q=b[i].q||[]).push(arguments)});b[i].l=+new Date;
+      o.getElementsByTagName(l)[0].parentNode.appendChild(o.createElement(l)).src='//www.google-analytics.com/analytics.js'}
+      (window,document,'ga','script'));ga('create','{{ site.google_analytics }}','auto');ga('send','pageview');
     </script>  {% endif %}

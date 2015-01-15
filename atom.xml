@@ -16,7 +16,7 @@ style: xsl
   <generator uri="http://jekyllrb.com/" version="{{ site.github.versions.jekyll }}">Jekyll</generator>
   <author>
     <name>{{ site.github.owner_name | xml_escape }}</name>
-  </author>{% for post in site.posts limit:10 %}
+  </author>{% for post in site.posts limit:page.no_of_posts %}
   <entry>
     <id>{{ site.github.url | uri_escape }}{{ post.id | uri_escape }}</id>
     <link type="text/html" rel="alternate" href="{{ site.github.url | uri_escape }}{{ post.url | uri_escape }}"/>
