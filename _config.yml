@@ -10,7 +10,7 @@ highlight: pygments
 
 html:
   class: no-js
-  dir: rtl
+# dir: rtl
   lang: en
 
 # google_analytics: U-XXXXXX-XA
