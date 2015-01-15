@@ -9,7 +9,7 @@
     <meta name="author" content="{{ project.owner_name }}">
     <meta name="description" content="{{ project.project_tagline }}">{% for umeta in h5bp.meta offset:1 %}{% for meta in umeta[1] %}
     <meta {{ umeta[0] }}="{{ meta[0] }}" content="{{ meta[1] | join: ', ' }}">{% endfor %}{% endfor %}{% unless page.error %}
-    {% for dlink in h5bp.link %}{% for link in dlink[1] %}<link rel="{{ dlink[0] }}" {% for attr in link[1] %}{{ attr[0] }}="{{ attr[1] }}" {% endfor %}href="{% unless link[0] contains '//' %}{% endunless %}{{ link[0] }}">
+    {% for dlink in h5bp.link %}{% for link in dlink[1] %}<link rel="{{ dlink[0] }}" {% for attr in link[1] %}{{ attr[0] }}="{{ attr[1] }}" {% endfor %}href="{{ link[0] }}">
     {% endfor %}{% endfor %}<link rel="canonical" href="{{ project.url | remove_first: 'http:' }}{{ page.url }}">
     {% if page.shortlink %}<link rel="shortlink" href="{{ page.shortlink }}">
     {% endif %}<script src='js/vendor/modernizr-{{ h5bp.modernizr.version }}.min.js'></script>{% endunless %}
