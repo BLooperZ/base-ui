@@ -27,6 +27,7 @@ link:
 
   stylesheet:
     //raw.githubusercontent.com/mojombo/tpw/master/css/syntax.css:
+    //necolas.github.com/normalize.css/3.0.2/normalize.css:
     base.css:
 
   sitemap:
