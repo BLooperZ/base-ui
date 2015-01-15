@@ -4,7 +4,7 @@
     <meta charset="{{ site.encoding }}">{% for header in h5bp.meta.headers %}
     <meta http-equiv="{{ header[0] }}" content="{{header[1] | join: ', ' }}">{% endfor %}
     <!-- CHECK THIS WITH PERMALINKS - CAN BE AWESOME-->
-    <base href="{{ project.url | remove_first: 'http:' }}/">
+    <base href="{{ project.url | remove_first: 'http:' }}/"/>
     <title>{{ project.project_title }}{% if page.title %} – {{ page.title }}{% endif %}</title>
     <meta name="author" content="{{ project.owner_name }}">
     <meta name="description" content="{{ project.project_tagline }}">{% for umeta in h5bp.meta offset:1 %}{% for meta in umeta[1] %}
@@ -12,15 +12,13 @@
     {% for dlink in h5bp.link %}{% for link in dlink[1] %}<link rel="{{ dlink[0] }}" {% for attr in link[1] %}{{ attr[0] }}="{{ attr[1] }}" {% endfor %}href="{% unless link[0] contains '//' %}{% endunless %}{{ link[0] }}">
     {% endfor %}{% endfor %}<link rel="canonical" href="{{ project.url | remove_first: 'http:' }}{{ page.url }}">
     {% if page.shortlink %}<link rel="shortlink" href="{{ page.shortlink }}">
-    {% endif %}<script src='//cdnjs.cloudflare.com/ajax/libs/modernizr/{{ h5bp.modernizr.version }}/modernizr.min.js'></script>
-    <script>window.Modernizr || document.write('<script src="js/vendor/modernizr-{{ h5bp.modernizr.version }}.min.js">\x3C/script>')</script>{% endunless %}
+    {% endif %}<script src='js/vendor/modernizr-{{ h5bp.modernizr.version }}.min.js'></script>{% endunless %}
   </head>
   <body>
 {{content}}
     {% unless page.error %}<script src="//ajax.googleapis.com/ajax/libs/jquery/{{ h5bp.jquery.version }}/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{ h5bp.jquery.version }}.min.js"><\/script>')</script>
     {% for script in h5bp.script %}<script src="{{ script }}"></script>
-    {% endfor %}{% for script in page.script %}<script src="{{ script }}"></script>
-    {% endfor %}{% include analytics.html %}{% endunless %}
+    {% endfor %}{% for script in page.script %}<script src="{{ script }}"></script>{% endfor %}{% include analytics.html %}{% endunless %}
   </body>
 </html>
