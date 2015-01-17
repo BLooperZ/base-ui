@@ -1,7 +1,7 @@
 ---
 
 ---
-b ()->
+b (l)->
   ((b,o,i,l)->
     b.GoogleAnalyticsObject=l
     (b[l]=b[l]or->
@@ -11,3 +11,5 @@ b ()->
     return)window,document,"script","ga"
   ga "create","UA-XXXXX-X","auto"
   ga "send","pageview"
+
+b 2
