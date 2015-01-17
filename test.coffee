@@ -1,5 +1,4 @@
 ---
-permalink: /a.html
 ---
 {% if site.google_analytics %}
     <script>###
