@@ -1,3 +1,5 @@
+---
+---
 ((b,o,i,l)->
   b.GoogleAnalyticsObject=l
   (b[l]=b[l]or->
