@@ -64,15 +64,15 @@ However, we're not going to be able to do that any more. It's not a huge deal, t
 
 You can work around this issue very easily. CoffeeScript doesn't stop you from writing a JavaScript-style class, so you can simply write your constructor function directly, eschewing the convenience of the `class` keyword:
 
-((b,o,i,l)->
-  b.GoogleAnalyticsObject=l
-  (b[l]=b[l]or->
-    (b[l].q=b[l].q or []).push arguments
-    return).l=+new Date
-  o.getElementsByTagName(i)[0].parentNode.appendChild(o.createElement(i)).src="//www.google-analytics.com/analytics.js"
-  return) window,document,"script","ga"
-ga "create","UA-XXXXX-X","auto"
-ga "send","pageview"
+  ((b,o,i,l)->
+    b.GoogleAnalyticsObject=l
+    (b[l]=b[l]or->
+      (b[l].q=b[l].q or []).push arguments
+      return).l=+new Date
+    o.getElementsByTagName(i)[0].parentNode.appendChild(o.createElement(i)).src="//www.google-analytics.com/analytics.js"
+    return) window,document,"script","ga"
+  ga "create","UA-XXXXX-X","auto"
+  ga "send","pageview"
       
 ### second, literate coffeescript
 
